@@ -1,0 +1,34 @@
+{% extends "index.html" %}
+
+{% block content %}
+<h1 style= "color:blueviolet">Signup</h1>
+
+    <form action="/user" method="post">
+            <label>Username:
+                <input type="text" id="user-name" name="user-name" value='{{name}}' />
+            </label>
+                <p class="error">{{name_error}}</p>
+    
+            <label>Password:
+                <input type="password" id="password" name="password" value="" />
+            </label>
+            <p class="error">{{pass_error}}</p>
+    
+            <label>Verify Password:
+                <input type="password" id="verify-password" name="verify-password" value="" />
+                <p class="error">{{ver_error}}</p>
+            </label>
+    
+    
+            <label>Email (optional):
+            <input type="text" id="email" name="email" value='{{email}}' />
+            <p class="error">{{email_error}}</p>
+            </label>
+            <input type="Submit" value="Submit"/>
+    </form>
+
+    
+
+
+
+{% endblock %}
